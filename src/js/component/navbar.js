@@ -36,7 +36,7 @@ export const Navbar = () => {
 						let name=item.name;
 						return( 
 							<li key={index} className="d-flex justify-content-between align-items-center ps-1">
-								<Link to={`/LearnMore/${tipo}/${id}/${img}/${name}`}>
+								<Link to={`/LearnMore/${tipo}/${id}/${img}`}>
 								 {name}
 								</Link>			
 								<button className= "btn" onClick={(event)=>actions.deleteFavorite(id)}>

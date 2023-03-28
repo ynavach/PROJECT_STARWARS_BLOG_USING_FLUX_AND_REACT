@@ -25,8 +25,9 @@ export const Card = (props) => {
     			<p className="card-text">{props.url}</p>
 			</div>
 			<div className="card-footer bg-transparent border-warning d-flex justify-content-between " >							
-				<Link to={`/LearnMore/${tipo}/${id}/${img}/${name}`}>
-						<span className="btn btn-primary text-warning">Learn more!</span>
+				<Link to={`/LearnMore/${tipo}/${id}/${img}`}>
+						<span className="btn btn-primary text-warning" 
+						>Learn more!</span>
 				</Link>
 				<span className="btn btn-primary fa fa-heart text-warning m-1"
 					onClick={()=>actions.addFavorite(props.tipo, props.uid, props.image,props.name)} role="button"></span>

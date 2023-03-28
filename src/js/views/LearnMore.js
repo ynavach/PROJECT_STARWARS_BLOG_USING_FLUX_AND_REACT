@@ -9,14 +9,12 @@ export const LearnMore = props => {
 	const {store, actions} = useContext (Context);
 	const params = useParams();
 
-	console.log("por aqui probando el vehiculo, sus parametros son:", params);
-	
 	const getdata = async () =>
 	{
 		const API_URL = "https://www.swapi.tech/api"
 		try {
 			const response = await fetch (`${API_URL}/${params.tipo}/${params.id}`);
-			console.log("respuesta", response);
+			
 			if (response.ok == false){
 				const error = response.json();
 				throw new Error(error.message);
@@ -28,12 +26,12 @@ export const LearnMore = props => {
 		catch (error){
             console.log("Estatus de error: ", error);
 		}
-		console.log("El body.result es:", data)
+		
 	}
 
 	useEffect(()=>{
         getdata ()
-	}, []);
+	}, [params.id]);
 	
 return(
 	<div className="position-absolute top-50 start-50 translate-middle mt-5 pt-5 ">
