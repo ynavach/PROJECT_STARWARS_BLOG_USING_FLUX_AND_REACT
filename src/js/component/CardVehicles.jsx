@@ -14,7 +14,7 @@ export const CardVehicles= () => {
 				throw new Error(error.message);
 			}
 			const body = await response.json();
-
+	
 			setVehicles (body.results);
 						
 		}

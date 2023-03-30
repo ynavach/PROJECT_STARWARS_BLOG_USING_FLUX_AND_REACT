@@ -39,7 +39,7 @@ export const Navbar = () => {
 								<Link to={`/LearnMore/${tipo}/${id}/${img}`}>
 								 {name}
 								</Link>			
-								<button className= "btn" onClick={(event)=>actions.deleteFavorite(id)}>
+								<button className= "btn" onClick={(event)=>actions.deleteFavorite(id,tipo)}>
                                     <i className= "fas fa-trash-alt pe-3"></i>
                                 </button>							
 							</li>

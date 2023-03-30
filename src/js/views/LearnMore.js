@@ -31,7 +31,7 @@ export const LearnMore = props => {
 
 	useEffect(()=>{
         getdata ()
-	}, [params.id]);
+	}, [params.id, params.tipo]);
 	
 return(
 	<div className="position-absolute top-50 start-50 translate-middle mt-5 pt-5 ">

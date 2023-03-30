@@ -19,10 +19,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
-			deleteFavorite:(id)=>{
+			deleteFavorite:(id,tipo)=>{
 				const store = getStore();
 			
-				const result =store.favorite.filter((people)=> people.uid!==id);
+				const result =store.favorite.filter((people)=> ((people.uid!==id) || (people.tipo!==tipo)));
 				
 				setStore({favorite:result});
 							
